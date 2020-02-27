@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+alias ls='exa'
+alias find='fd'
+alias weather="curl wttr.in"
+alias yt="youtube-dl --add-metadata -i -o '%(upload_date)s-%(title)s.%(ext)s'"
+alias yta="yt -x -f bestaudio/best"
+alias ytap="yta --yes-playlist"
+alias mv='mv -nv'
+
