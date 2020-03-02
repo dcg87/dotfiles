@@ -1,10 +1,15 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
-
+# Add `/usr/local/bin` to the `$PATH`
+export PATH="/usr/local/bin:$PATH"
+# Add gnu sed to the `$PATH`
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+# Add gnu coreutils to $PATH
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/.{bashrc,inputrc,hushlogin,gitconfig,bash_prompt,alias,functions,exports,vimrc}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 
+alias find='gfind'
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
@@ -66,4 +67,8 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 
 
 alias firefox='open /Applications/Firefox.app/Contents/MacOS/Firefox'
-
+alias mv='mv -nv'
+alias version='$SHELL --version'
+alias grep='ggrep'
+alias p='cd ~/projects'
+alias tar='gtar'
